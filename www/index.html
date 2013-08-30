@@ -39,45 +39,7 @@
             em { color: red; font-weight: bold; padding-right: .25em; }
             </style>
 	  
-	  <script type="text/javascript" charset="utf-8">
-
-    $(document).bind('pageinit', function() {
-	
-	
-	   // Page 3 init begins here
-					$("#reminders").live('pageinit', function() {
-					  
-					  var req = '{"SSBS":"TCSA"}';
-					
-					  $.ajax({
-                                                     type: "GET",
-                                                     url: "http://region7saicenters.org/saiyazc/api/GMngs",
-                                                     dataType: "json",                                                   
-                                                     data:req,
-                                                     success: function(msg){
-												       
-													      document.getElementById("p3li1").innerHTML=msg.msg1;
-														  document.getElementById("p3li2").innerHTML=msg.msg2;
-														  document.getElementById("p3li3").innerHTML=msg.msg3;
-														  document.getElementById("p3li4").innerHTML=msg.msg4;
-														
-														
-													 },
-													 error: function (error) {
-														//alert('error; ' + error);
-														document.getElementById("p3li1").innerHTML='error in getting data';
-												}
-													 
-							});  // Page 3 Ajax Ends Here
-					
-					  
-					   $("#page3List").listview('refresh');
-									
-							});  // Page 3 Init Ends Here
-	
-	  }); // document bind pageinit ends here
-
-    </script>
+	 
 
    
  
