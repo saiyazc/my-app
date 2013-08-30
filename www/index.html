@@ -16,7 +16,7 @@
       
       <link rel="stylesheet" type="text/css" href="css/tang.css">
 	  
-	  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" >
+	  <script type="text/javascript" src="js/jquery.validate.js" >
         </script>
         <!-- User-generated css -->
         <style>
@@ -43,245 +43,9 @@
         <!-- User-generated js -->
 		
 		
-        <script type="text/javascript">
-		
-		
-      
-	      
-			
-			
-           // $(document).on("pageinit","#page2", function() {
-		   
-		    $(document).bind('pageinit', function() {
-			
-			  $("#page2").live('pageinit', function() {
-                          $("#name").val(localStorage.name);
-						//   alert(1);
-						   //alert(localStorage.devCountEnable);
-						   if(localStorage.devCountEnable == "true"){
-						  // alert(2);
-							
-								$("#page2List").append('<li><fieldset class="ui-grid-a"><div class="ui-block-a"> <input type="checkbox"  checked="checked" name="devCountEnable" id="devCountEnable" class="custom" data-mini="true" /><label for="devCountEnable"><font color="#8B0000" face="Helvetica" size="-1"><i>Your Chants </i></font></label></div><div class="ui-block-b" ><span class="ui-li-count" id="indCount"> </span> </div></fieldset></li> <li><font color="#8B0000" face="Helvetica" size="-1"><i>unique Name or emailid helps to show your count </i></font></li>');
-								 $("#page2List").listview('refresh');
-								  if(($("#name").val() == null ) ||  ($("#name").val() == "" )){
-								
-									 $("#indCount").hide();
-								
-									
-									}else{
-									
-									 $ ('#page2').find('ul').find('li:gt(3)').hide().end();
-									
-									 $("#indCount").show();
-									// alert(7);
-									}
-						   }else{
-						 
-						   		$("#page2List").append('<li><fieldset class="ui-grid-a"><div class="ui-block-a"> <input type="checkbox"  name="devCountEnable" id="devCountEnable" class="custom" data-mini="true" /><label for="devCountEnable"><font color="#8B0000" face="Helvetica" size="-1"><i>Your Chants </i></font></label></div><div class="ui-block-b" ><span class="ui-li-count" id="indCount"> </span> </div></fieldset></li> <li><font color="#8B0000" face="Helvetica" size="-1"><i>unique Name or emailid helps to show your count </i></font></li>');
-							
-								$("#page2List").listview('refresh');
-							
-								$ ('#page2').find('ul').find('li:gt(3)').hide().end();
-					
-								$("#indCount").hide();
-					//			alert(12);
-						   }
-						  
-						  $("#page2List").listview('refresh');
-						  
-                           var req = '{"dev_id": '+'"'+$("#name").val()+'"'+',"SSBS":"TCSA"}';
-						   //alert('calling ajax for getjson');
-                           $.ajax({
-                                                     type: "POST",
-                                                     url: "http://region7saicenters.org/saiyazc/api/GayathriCounts",
-                                                     dataType: "json",                                                   
-                                                     data:req,
-                                                     success: function(msg){
-													 
-													    if (msg.total_count > 0) {
-														 document.getElementById("totalCount").innerHTML=msg.total_count;
-														}
-														
-														if (msg.ind_count > 0) {
-															document.getElementById("indCount").innerHTML=msg.ind_count;
-														}
-													 }
-												}); // ajax getJSON ends here
-												
-							 $('#devCountEnable').click(function()
-										  {
-											if($(devCountEnable).prop("checked")){
-												localStorage.devCountEnable="true";
-												
-												if(($("#name").val() == null ) ||  ($("#name").val() == "" )){
-													
-													$ ('#page2').find('ul').find('li:gt(3)').show().end();
-												}else{
-												 $ ('#page2').find('ul').find('li:gt(3)').hide().end();
-												 $("#indCount").show();
-												}
-											  //  alert(localStorage.devCountEnable);
-			///alert(1);
-											}else{
-												localStorage.devCountEnable="false";
-												//alert(localStorage.devCountEnable);
-												$("#indCount").hide();
-												$ ('#page2').find('ul').find('li:gt(3)').hide().end();					;
-												//alert(2);
-											}
-									
-									});	 // IndCountEnable CheckBox onClick Ends Here
-									
-							$("#gcForm").validate({
-                                                 rules: {
-                                                 count: {
-                                                     required: true
-                                                    }
-                                                   },
-                                                 messages: {
-                                                 count: "Please enter a valid count value"
-                                                 }
-                                                 }); // form validaton rules ends here
-            
-                         						 
-            
-                           $("#count").keydown(function (event) {
-                                               if (event.shiftKey) {
-                                               event.preventDefault();
-                                               }
-                                               
-                                               if (event.keyCode == 46 || event.keyCode == 8) {
-                                               }
-                                               else {
-                                               if (event.keyCode < 95) {
-                                               if (event.keyCode < 48 || event.keyCode > 57) {
-                                               event.preventDefault();
-                                               }
-                                               }
-                                               else {
-                                               if (event.keyCode < 96 || event.keyCode > 105) {
-                                               event.preventDefault();
-                                               }
-                                               }
-                                               }
-                                               }); // count filed input validation
-							$("#name").focusout(function() {
-									
-                                  
-										localStorage.name=$("#name").val();
-										var req = '{"dev_id": '+'"'+$("#name").val()+'"'+',"SSBS":"TCSA"}';
-										$.ajax({
-                                                     type: "POST",
-                                                     url: "http://region7saicenters.org/saiyazc/api/GayathriCounts",
-                                                     dataType: "json",                                                   
-                                                     data:req,
-                                                     success: function(msg){
-													 
-													    if (msg.total_count > 0) {
-														 document.getElementById("totalCount").innerHTML=msg.total_count;
-														}
-														if (msg.ind_count > 0) {
-														 document.getElementById("indCount").innerHTML=msg.ind_count;
-														}
-														
-													 }
-												}); // getJSON onfoucs out of name ends here..
-						   
-						   
-						      }); // name field on focus ends here.
-							  
-							  // ----- Form Submit
-							  
-							  $("#gcForm").submit(function(){
-                                              if($("#gcForm").valid()){
-                                                if((localStorage.dev_id_exists == null || localStorage.dev_id_exists == undefined)){
-												   localStorage.dev_id_exists=0;
-												}
-											   var req = '{"record_Dev_count": "1","dev_id_exists": '+'"'+localStorage.dev_id_exists+'"'+',"dev_id": '+'"'+$("#name").val()+'"'+',"SSBS":"TCSA","country": "us","region": "zone1","count": '+'"'+$("#count").val()+'"'+',"comments": "From Mobile App"}';
-											   var confMsg = 'Added ' +  $("#count").val() + ' to Total';
-											   
-											 $.ajax({
-                                                     type: "POST",
-                                                     url: "http://region7saicenters.org/saiyazc/api/GayathrisT",
-                                                     dataType: "json",                                                   
-                                                     data:req,
-                                                     success: function(msg){
-                                                    
-													 if (msg.total_count > 0){
-													   document.getElementById("totalCount").innerHTML=msg.total_count;
-													
-													   $("#count").val("");
-													   $("#count").attr('placeholder', confMsg);
-													   if (msg.dev_id_exists) {
-														  localStorage.dev_id_exists=msg.dev_id_exists;
-														}
-														//alert('soafarsogood');
-													   if (msg.ind_count > 0) {
-													      //   alert('everything is good');
-														  document.getElementById("indCount").innerHTML=msg.ind_count;
-															//$("#indCount").show();
-														}
-														
-														
-													 }else {
-													       var confMsge = 'ERR:' +  msg.error ;
-																$("#count").val("");
-																$("#count").attr('placeholder', confMsge);
-													      }
-													
-													 } //ajax success function ends here
-												});  //ajax form submit ends here
-											 }
-										return false;
-								});
-                                              
-							  
-							  // Form Submit Ends
-												
-                            }); // page2 live pageinit ends here 
-							
-				  // Page 3 init begins here
-					$("#page3").live('pageinit', function() {
-					  
-					  var req = '{"SSBS":"TCSA"}';
-					
-					  $.ajax({
-                                                     type: "GET",
-                                                     url: "http://region7saicenters.org/saiyazc/api/GMngs",
-                                                     dataType: "json",                                                   
-                                                     data:req,
-                                                     success: function(msg){
-												       
-													      document.getElementById("p3li1").innerHTML=msg.msg1;
-														  document.getElementById("p3li2").innerHTML=msg.msg2;
-														  document.getElementById("p3li3").innerHTML=msg.msg3;
-														  document.getElementById("p3li4").innerHTML=msg.msg4;
-														
-														
-													 },
-													 error: function (error) {
-														//alert('error; ' + error);
-														document.getElementById("p3li1").innerHTML='error in getting data';
-												}
-													 
-							});  // Page 3 Ajax Ends Here
-					
-					  
-					   $("#page3List").listview('refresh');
-									
-							});  // Page 3 Init Ends Here
-                           
-                }); // document bind pageinit ends here
-            </script>
+       
         
-        <script>
-            try {
-                
-                               
-            } catch (error) {
-                console.error("Your javascript has an error: " + error);
-            }
-      </script>
+        
     </head>
     <body>
         <!-- Home -->
@@ -338,21 +102,7 @@
 					
                             
                             
-                            <!--div class="ui-grid-a">
-                                <div class="ui-block-a">
-                                    <font color="#8B0000" face="Helvetica" size="-1"> <i>
-                                       <br>
-                                    </i></font>
-                                </div>
-                                <div class="ui-block-b">
-                                    <audio controls>
-                                        <source src="audio/gayatri.mp3">
-                                            
-                                            </audio>
-                                    
-                                </div>
-                                
-                            </div-->
+                           
                             
                             
                         
@@ -374,11 +124,7 @@
                     
                 </ul>
 			</div>
-            <!--div class="footer" data-theme="b" data-role="footer" data-position="fixed">
-             <h3>
-             Tuned for  Sai Ya Zonal Conference
-             </h3>
-             </div -->
+           
 			
 			
 			
@@ -450,28 +196,7 @@
                        
                     </li>
 					
-					<!--li>
-						<fieldset class="ui-grid-a">
-                                <div class="ui-block-a"> <input type="checkbox"  checked="checked" name="devCountEnable" id="devCountEnable" class="custom" data-mini="true" />
-										<label for="devCountEnable">
-											 <font color="#8B0000" face="Helvetica" size="-1"><i> 
-											Your Chants </i>
-											  </font>
-										</label>
-								  </div>
-                                <div class="ui-block-b" id="indCountDiv"><span class='ui-li-count' id="indCount"> </span> </div>
-                        </fieldset>
-					</li>
 					
-					<li>
-					        
-                                
-								 <font color="#8B0000" face="Helvetica" size="-1"><i> 
-												unique Name or emailid helps to show your count </i>
-								  </font>
-								
-                       
-					</li-->
                     
                 </ul>
             </div>
