@@ -12,34 +12,23 @@
       
       <script src="js/jquery-1.9.1.js"></script>
       <script src="js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
-      <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" ></script>
+      <script type="text/javascript" src="js/jquery.validate.js" ></script>
       
       <link rel="stylesheet" type="text/css" href="css/tang.css">
 	  
-	  
-	  <style>
-            label.error {
-				color: red;
-				font-size: 16px;
-				font-weight: normal;
-				line-height: 1.4;
-				margin-top: 0.5em;
-				width: 100%;
-				float: none;
-            }
-            
-            @media screen and (orientation: portrait){
-				label.error { margin-left: 0; display: block; }
-            }
-            
-            @media screen and (orientation: landscape){
-				label.error { display: inline-block; margin-left: 22%; }
-            }
-            
-            em { color: red; font-weight: bold; padding-right: .25em; }
-            </style>
-	  
-	 
+	  <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.hide();
+    }
+
+    </script>
 
    
  
@@ -63,12 +52,9 @@
                   <div style="font-family: 'Tangerine', serif; font-size: 27px; color: red; text-shadow: 3px 3px yellow; "> One For All~ All For Sai </div>
                </li>
                <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                 
-						   
-                        
-							     <iframe width="100%" height="60" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F89113420%3Fsecret_token%3Ds-NzSKX&amp;color=8a00ff&amp;auto_play=false&amp;show_artwork=false&amp;liking=false&amp;buying=false"></iframe>		
+                    <iframe width="100%" height="60" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F89113420%3Fsecret_token%3Ds-NzSKX&amp;color=8a00ff&amp;auto_play=false&amp;show_artwork=false&amp;liking=false&amp;buying=false"></iframe>		
 						
-					
+					 
                </li>
                <li class="ui-corner-all ui-shadow" style="margin: 5px;">
                   <a href="tel:+15105790481" >
@@ -412,46 +398,75 @@
 		
 		 <div data-role="page" id="reminders">
          <div data-role="content">
-            <ul data-role="listview" data-theme="e" id="page3List">
-          
-								<li>
-									
-									<font color="#8B0000" face="Helvetica" size="+1"> Sathya Sai speaks on benefits of Gayatri chanting</font>
-									<img src="images/logo.jpg" alt="Min Pin" />
-									
-								</li>
-                    
-							
-                            	<li>
-                        
-								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
-									 <span id="p3li1"> </span> </i>
-									</font>	
-                        
-								</li>	
-								<li>
-                        
-								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
-									 <span id="p3li2"> </span> </i>
-									</font>	
-                        
-								</li>
-								<li>
-                        
-								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
-									 <span id="p3li3"> </span> </i>
-									</font>	
-                        
-								</li>
-								<li>
-                        
-								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
-									 <span id="p3li4"> </span> </i>
-									</font>	
-                        
-								</li>
-                    
-				</ul>
+            <ul data-role="listview" data-theme="e">
+               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
+                  <img src="images/08.jpg" height="120%" width="200%"alt="One For All ~ All For Sai" /> <br>
+                  <div style="font-family: 'Tangerine', serif; font-size: 40px; color: red; text-shadow: 3px 3px yellow; "> R e m i n d e r s </div>
+               </li>
+               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" id="facilitieslayers">
+                  <h3>
+                     <font color="#8A084B" face="Helvetica" size="+1"> Packing Checkilist <br>
+                     Essentials To Bring 
+                     </font> 
+                  </h3>
+                  <fieldset data-role="controlgroup">
+                     <input type="checkbox" data-mini="true" name="education" id="pc" class="layers"/>
+                     <label for="pc"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Pillow and Pillow Case</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="bl" class="layers"/>
+                     <label for="bl"> <font color="#D400FF" face="Helvetica" size="+1"><i> Blanketas</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="tl" class="layers"/>
+                     <label for="tl"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Toiletries</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="wb" class="layers"/>
+                     <label for="wb"> <font color="#D400FF" face="Helvetica" size="+1"><i> Water Bottle</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="ef" class="layers"/>
+                     <label for="ef"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Flashlight</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="SB" class="layers"/>
+                     <label for="SB"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Shower Bag</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="bsf" class="layers"/>
+                     <label for="bsf"> <font color="#D400FF" face="Helvetica" size="+1"><i> Bed sheets (fitted and flat)</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="tw" class="layers"/>
+                     <label for="tw"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Towels ( thin and will dry quickly)</i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="sc" class="layers"/>
+                     <label for="sc"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Sunscreen </i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="ub" class="layers"/>
+                     <label for="ub"> <font color="#D400FF" face="Helvetica" size="+1"><i> Umbrella </i></font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="bsl" class="layers"/>
+                     <label for="bsl"> <font color="#D400FF" face="Helvetica" size="+1"><i> Bathroom slippers</i> </font></label>
+                     <input type="checkbox" data-mini="true" name="education" id="med" class="layers"/>
+                     <label for="med"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Medications (OTC, Rx, Allergy)</i></font></label>
+                  </fieldset>
+               </li>
+               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
+                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
+                     Driving </font>
+                  </h3>
+                  <div >
+                     <font color="red" face="Helvetica" size="+1"> 
+                     Start early, drive slowly, reach safely. Please
+                     avoid driving late. The campsite registration desk will be closed between  11pm and  6am.
+                     </font>
+                  </div>
+               </li>
+               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
+                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
+                     Dress Code </font>
+                  </h3>
+                  <div >
+                     <font color="#D400FF" face="Helvetica" size="+1"> The dress code is business casual and  modest
+                     clothing. Light shawl or dupata is recommended for the ladies' 
+                     kurta tops. Shorts or tank tops are not allowed. Bring walking 
+                     shoes such as sneakers as there will be outdoor activities.</font>
+                  </div>
+               </li>
+               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
+                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
+                     Weather </font>
+                  </h3>
+                  <font color="red" face="Helvetica" size="+1">
+                     <div id="test"></div>
+                  </font>
+               </li>
+            </ul>
          </div>
          <div data-role="footer" data-position="fixed"  >
             <nav data-role="navbar">
