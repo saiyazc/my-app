@@ -12,485 +12,542 @@
       
       <script src="js/jquery-1.9.1.js"></script>
       <script src="js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
-      <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" ></script>
+      
       
       <link rel="stylesheet" type="text/css" href="css/tang.css">
 	  
-	  <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.splashscreen.hide();
-    }
-
-    </script>
-
-   
- 
-   </head>
-   <body>
-   
-    <!-- Landing Page  -->
-      <div data-role="page" id="home" data-dom-cache="true">
-        
-         <div data-role="content">
-            <ul data-role="listview">
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <div style="font-family: 'Tangerine', serif; font-size: 23px; color:red; text-shadow: 3px 3px yellow; "> ZONE 1 &nbsp;&nbsp; S A I  Youth Conference </div>
-               </li>
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <div data-role="content">
-                     <img src="images/2.jpg" height="130" width="250"alt="" /> <br>
-                  </div>
-               </li>
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <div style="font-family: 'Tangerine', serif; font-size: 27px; color: red; text-shadow: 3px 3px yellow; "> One For All~ All For Sai </div>
-               </li>
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <a href="http://goo.gl/xyUBpL" data-transition="slide">
-                     <i>
-                        <h1>Location(GPS) :   </h1>
-                     </i>
-                     <font color="#8A084B" face="Helvetica" size="+1"> 249 Camp Green Lane Rd <br>
-                     Green Lane, PA 18054
-                  </a>
-                  </font> 
-               </li>
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <a href="tel:+15105790481" >
-                     <font color="#8A084B" face="Helvetica" size="+1"> Sai Youth Conference Helpdesk : <br> +1-510-579-0481  <br>
-                     </font>  
-                     <i>
-                        <h1>(Aug 23rd - Aug 25th) </h1>
-                     </i>
-                  </a>
-               </li>
-              
-				<li  class="ui-corner-all ui-shadow"  data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
-                  Campsite Map
-                  </font>
-                  </h3>
-				  
-				  <div data-role="content" style="padding:0;"> 
-                   	<font color="#8A084B" face="Helvetica" size=""> 
-                 <i>(Tap On for BigView)</i>
-                  </font>			  
-<a href="#mapZoom" data-transition="slide" >				  
-
-           <img src="images/Slide1.JPG" width="320" height="480" alt="map">
-		   </a>
-        </div>
-               </li>
-            </ul>
-         </div>
-         <div data-role="footer" data-position="fixed"  >
-            <nav data-role="navbar">
-               <ul>
-                  <li><a href="#home" data-icon="home">Home</a></li>
-                  <li><a href="#ProgramMain" data-icon="info" data-transition="slide">Program</a></li>
-                  <li><a href="#reminders" data-icon="check" data-transition="slide">Reminders</a></li>
-               </ul>
-            </nav>
-         </div>
-      </div>
-	    <!-- Landing Page Ends -->
-		<!-- mapZoom page -->
-		 <div data-role="page" id="mapZoom">
-		  
-		 <!--span class='zoom' id='ex1' -->
-		 <span>
-				<img src='images/Slide1.JPG' width='1020' height='680' alt='map'/>
-		  </span>
-		    <div data-role="footer" data-position="fixed"  >
-            <nav data-role="navbar">
-               <ul>
-                  <li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-                  <li><a href="#ProgramMain" data-icon="info" data-transition="slide">Program</a></li>
-                  <li><a href="#reminders" data-icon="check" data-transition="slide">Reminders</a></li>
-               </ul>
-            </nav>
-         </div>
-		 </div>
-		 <!-- mapZoom page ends  -->
-	   <!-- Program Page  -->
-      <div data-role="page" id="ProgramMain">
-         <div data-role="content">
-            <ul data-role="listview" data-theme="e">
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <img src="images/07.jpeg" height="200%" width="200%"alt="One For All ~ All For Sai" /> <br>
-                  <div style="font-family: 'Tangerine', serif; font-size: 24px; color: blue; text-shadow: 3px 3px yellow;  "> P R O G R A M </div>
-               </li>
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <!--a href="http://goo.gl/hVk4y0" data-transition="slide"-->
-				  <a href="http://goo.gl/k0YRnr" data-transition="slide">
-                  <font color="#8A084B" face="Helvetica" size="+1"> Workshop Sign Up
-                  </font> 
-                  </a>
-               </li>
-               <li  class="ui-corner-all ui-shadow"  data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
-                     Friday- August 23, 2013 <br>
-                     3:00 PM - 10:00 PM <br>
-					 </font>
-					  <font color="green" face="Helvetica" > 
-                     <i> (Registration Open) </i> </font>
-                  </h3>
-                  <div data-role="content">
-				   <font color="green" face="Helvetica" > 
-                     <table data-role="table" id="pgm1-table" data-mode="reflow" class="ui-responsive table-stroke">
-                        <thead>
-                           <tr>
-                              <th data-priority="1">Time</th>
-                           <th data-priority="persist">Program</th>
-                           <th data-priority="2"><a href="map.htm">Location</a></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>3.00pm-10.00pm</td>
-                              <td>Registration</td>
-                              <td>White House</td>
-                           </tr>
-                           <tr>
-                              <td>5.30pm-6.30pm</td>
-                              <td>Devotional singing</td>
-                              <td>Globe</td>
-                           </tr>
-                           <tr>
-                              <td>6.30pm-7.30pm</td>
-                              <td>Dinner</td>
-                              <td>Dining Hall</td>
-                           </tr>
-                           <tr>
-                              <td>8.00pm-9.00pm</td>
-                              <td>Game show</td>
-                              <td>Dome & Gym</td>
-                           </tr>
-                        </tbody>
-                     </table>
-					 </font>
-                  </div>
-               </li>
-              
-               
-			   <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" > 
-                      Saturday- August 24, 2013 <br>6:00 AM - 10:00 PM <br> </font>
-					   <font color="green" face="Helvetica" > 
-                   <i> (6:00AM - 10:45 AM <br> Registration Open ) </i> </font><br>
-				      <font color="blue" face="Helvetica" > 
-                  <i>(10:30AM - 10:00 PM <br> Service Symposium) </i> </font>
-                  </h3>
-                  <div data-role="content">
-				   <font color="blue" face="Helvetica" >
-                     <table data-role="table" id="pgm1-table" data-mode="reflow" class="ui-responsive table-stroke">
-                        <thead>
-                           <tr>
-                              <th>Time&nbsp;</th>
-                              <th>Program</th>
-                              <th><a href="map.htm">Location</a></th>
-                           </tr>
-                        </thead>
-                        <tbody>
-						
-						 <tr>
-                  <td>6.00am-6.15am</td>
-                  <td>Suprabhatam</td>
-                  <td>Globe (Main devotional hall)</td>
-               </tr>
-               <tr>
-                  <td>6.15am-7.00am</td>
-                  <td>Nagarsankirtan</td>
-                  <td>On Campus</td>
-               </tr>
-               <tr>
-                  <td>7.00am-8.00am</td>
-                  <td>***Breakfast***</td>
-                  <td>Dining Hall</td>
-               </tr>
-               <tr>
-                  <td>8.15am-8.45am</td>
-                  <td>Devotional singing</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>8.45am-9.00am</td>
-                  <td>Welcome</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>9.00am-9.30am</td>
-                  <td>Guest speaker-Dr.Narendranath Reddy</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>9.35am-9.40am</td>
-                  <td>Heart to Heart- YA speaker (Canada)</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>9.45am-10.30am</td>
-                  <td>Guest speaker- Wendy Ward Hoffer</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>10.30am-11.00am</td>
-                  <td> ***Break***</td>
-                  <td>&nbsp;</td>
-               </tr>
-               <tr>
-                  <td>11.00am-12.15pm</td>
-                  <td> Concurrent workshops</td>
-                  <td>Globe | Dome | Gym</td>
-               </tr>
-               <tr>
-                  <td>12.15pm-1.15pm</td>
-                  <td>   ***Lunch***</td>
-                  <td>Dining Hall</td>
-               </tr>
-               <tr>
-                  <td>1.30pm-1.35pm</td>
-                  <td>Heart to Heart- YA speaker (Suriname)</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>1.40pm-2.00pm</td>
-                  <td>Guest speaker- Dr. Bill Harvey</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>2.10pm-3.25pm</td>
-                  <td> Concurrent workshops</td>
-                  <td>Globe | Dome | Gym</td>
-               </tr>
-               <tr>
-                  <td>3.30pm-4.00pm</td>
-                  <td>   ***Coffe Break***</td>
-                  <td>Dining Hall</td>
-               </tr>
-               <tr>
-                  <td>4.10pm-4.15pm</td>
-                  <td>Heart to Heart- YA speaker (Trinidad)</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>4.20pm-4.40pm</td>
-                  <td>Guest speaker- Dr.Phil Gosselin</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>4.50pm-5.50pm</td>
-                  <td>Team building/outdoor activity</td>
-                  <td>Athletic Field</td>
-               </tr>
-               <tr>
-                  <td>6.00pm-7.00pm</td>
-                  <td>   ***Dinner***</td>
-                  <td>Dining Hall</td>
-               </tr>
-               <tr>
-                  <td>7.15pm-7.45pm</td>
-                  <td>Devotional singing</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>8.00pm-10.00pm</td>
-                  <td>Cultural program</td>
-                  <td>Globe</td>
-               </tr>
-			   
-						</tbody>
-                     </table>
-					 </font>
-                  </div>
-               </li>
-			   <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
-                      Sunday- August 25, 2013 <br>
-                  6:00 AM - 1:15 PM <br> </font>
-                  <i> <font color="blue" face="Helvetica" size="+1"> (Service Symposium) </i> </font>
-                  </h3>
-                  <div data-role="content">
-                     <table data-role="table" id="pgm1-table" data-mode="reflow" class="ui-responsive table-stroke">
-                        <thead>
-                           <tr>
-                              <th>Time&nbsp;</th>
-                              <th>Program</th>
-                              <th><a href="map.htm">Location</a></th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                  <td>6.00am-6.15am</td>
-                  <td>Suprabhatam</td>
-                  <td>Globe</td>
-               </tr>
-               <tr>
-                  <td>6.15am-7.00am</td>
-                  <td>Nagarsankirtan</td>
-                  <td>On Campus</td>
-               </tr>
-               <tr>
-                  <td>7.00am-8.00am</td>
-                  <td>***Breakfast***</td>
-                  <td>Dining Hall</td>
-               </tr>
-               <tr>
-                  <td>8.00am-8.30am</td>
-                  <td>Devotional singing</td>
-                  <td>Globe</td>
-               </tr>
-			    <tr>
-                  <td>8.35am-8.40am</td>
-                  <td>Heart to Heart- YA speaker (USA)</td>
-                  <td>Globe</td>
-               </tr>
-			    <tr>
-                  <td>8.45am-9.30am</td>
-                  <td>Guest speaker- Dr.Aroon Yusuf</td>
-                  <td>Globe</td>
-               </tr>
-			    <tr>
-                  <td>9.35am-10.00am</td>
-                  <td>Q & A- Guest speakers</td>
-                  <td>Globe</td>
-               </tr>
-			   <tr>
-                  <td>10.05am-10.15am</td>
-                  <td>Future Initiatives & Announcements</td>
-                  <td>Globe</td>
-               </tr>
-			    <tr>
-                  <td>10.20am-11.35am</td>
-                  <td>Concurrent workshops</td>
-                  <td>Globe/Dome/Gym</td>
-               </tr>
-			   <tr>
-                  <td>11.45am-12.15pm</td>
-                  <td>Devotional singing and closing prayers</td>
-                  <td>Globe</td>
-               </tr>
-			   <tr>
-                  <td>12.15pm-1.15pm</td>
-                  <td>***Lunch***</td>
-                  <td>Dining Hall</td>
-               </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </li>
-            </ul>
-         </div>
-         <div data-role="footer" data-position="fixed"  >
-            <nav data-role="navbar">
-               <ul>
-                  <li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-                  <li><a href="#ProgramMain" data-icon="info" data-transition="slide">Program</a></li>
-                  <li><a href="#reminders" data-icon="check" data-transition="slide">Reminders</a></li>
-               </ul>
-            </nav>
-         </div>
-      </div>
-	  
-	  
-	  <!-- Program Page Ends -->
+	  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.6/jquery.validate.js" >
+        </script>
+        <!-- User-generated css -->
+        <style>
+            label.error {
+				color: red;
+				font-size: 16px;
+				font-weight: normal;
+				line-height: 1.4;
+				margin-top: 0.5em;
+				width: 100%;
+				float: none;
+            }
+            
+            @media screen and (orientation: portrait){
+				label.error { margin-left: 0; display: block; }
+            }
+            
+            @media screen and (orientation: landscape){
+				label.error { display: inline-block; margin-left: 22%; }
+            }
+            
+            em { color: red; font-weight: bold; padding-right: .25em; }
+            </style>
+        <!-- User-generated js -->
 		
-		 <div data-role="page" id="reminders">
-         <div data-role="content">
-            <ul data-role="listview" data-theme="e">
-               <li class="ui-corner-all ui-shadow" style="margin: 5px;">
-                  <img src="images/08.jpg" height="120%" width="200%"alt="One For All ~ All For Sai" /> <br>
-                  <div style="font-family: 'Tangerine', serif; font-size: 40px; color: red; text-shadow: 3px 3px yellow; "> R e m i n d e r s </div>
-               </li>
-               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" id="facilitieslayers">
-                  <h3>
-                     <font color="#8A084B" face="Helvetica" size="+1"> Packing Checkilist <br>
-                     Essentials To Bring 
-                     </font> 
-                  </h3>
-                  <fieldset data-role="controlgroup">
-                     <input type="checkbox" data-mini="true" name="education" id="pc" class="layers"/>
-                     <label for="pc"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Pillow and Pillow Case</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="bl" class="layers"/>
-                     <label for="bl"> <font color="#D400FF" face="Helvetica" size="+1"><i> Blanketas</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="tl" class="layers"/>
-                     <label for="tl"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Toiletries</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="wb" class="layers"/>
-                     <label for="wb"> <font color="#D400FF" face="Helvetica" size="+1"><i> Water Bottle</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="ef" class="layers"/>
-                     <label for="ef"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Flashlight</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="SB" class="layers"/>
-                     <label for="SB"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Shower Bag</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="bsf" class="layers"/>
-                     <label for="bsf"> <font color="#D400FF" face="Helvetica" size="+1"><i> Bed sheets (fitted and flat)</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="tw" class="layers"/>
-                     <label for="tw"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Towels ( thin and will dry quickly)</i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="sc" class="layers"/>
-                     <label for="sc"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Sunscreen </i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="ub" class="layers"/>
-                     <label for="ub"> <font color="#D400FF" face="Helvetica" size="+1"><i> Umbrella </i></font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="bsl" class="layers"/>
-                     <label for="bsl"> <font color="#D400FF" face="Helvetica" size="+1"><i> Bathroom slippers</i> </font></label>
-                     <input type="checkbox" data-mini="true" name="education" id="med" class="layers"/>
-                     <label for="med"> <font color="#D400FF" face="Helvetica" size="+1"> <i>Medications (OTC, Rx, Allergy)</i></font></label>
-                  </fieldset>
-               </li>
-               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
-                     Driving </font>
-                  </h3>
-                  <div >
-                     <font color="red" face="Helvetica" size="+1"> 
-                     Start early, drive slowly, reach safely. Please
-                     avoid driving late. The campsite registration desk will be closed between  11pm and  6am.
-                     </font>
-                  </div>
-               </li>
-               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
-                     Dress Code </font>
-                  </h3>
-                  <div >
-                     <font color="#D400FF" face="Helvetica" size="+1"> The dress code is business casual and  modest
-                     clothing. Light shawl or dupata is recommended for the ladies' 
-                     kurta tops. Shorts or tank tops are not allowed. Bring walking 
-                     shoes such as sneakers as there will be outdoor activities.</font>
-                  </div>
-               </li>
-               <li  class="ui-corner-all ui-shadow" style="margin: 5px;" data-role="collapsible" >
-                  <h3>  <font color="#8A084B" face="Helvetica" size="+1"> 
-                     Weather </font>
-                  </h3>
-                  <font color="red" face="Helvetica" size="+1">
-                     <div id="test"></div>
-                  </font>
-               </li>
-            </ul>
-         </div>
-         <div data-role="footer" data-position="fixed"  >
-            <nav data-role="navbar">
-               <ul>
-                  <li><a href="#home" data-icon="home" data-transition="slide">Home</a></li>
-                  <li><a href="#ProgramMain" data-icon="info" data-transition="slide">Program</a></li>
-                  <li><a href="#reminders" data-icon="check" data-transition="slide">Reminders</a></li>
-               </ul>
-            </nav>
-         </div>
-      </div>
-	  
+		
+        <script type="text/javascript">
+		
+		
       
-	  <!-- Html Body Ends Here After -->
-	  
+	      
+			
+			
+           // $(document).on("pageinit","#page2", function() {
+		   
+		    $(document).bind('pageinit', function() {
+			
+			  $("#page2").live('pageinit', function() {
+                          $("#name").val(localStorage.name);
+						//   alert(1);
+						   //alert(localStorage.devCountEnable);
+						   if(localStorage.devCountEnable == "true"){
+						  // alert(2);
+							
+								$("#page2List").append('<li><fieldset class="ui-grid-a"><div class="ui-block-a"> <input type="checkbox"  checked="checked" name="devCountEnable" id="devCountEnable" class="custom" data-mini="true" /><label for="devCountEnable"><font color="#8B0000" face="Helvetica" size="-1"><i>Your Chants </i></font></label></div><div class="ui-block-b" ><span class="ui-li-count" id="indCount"> </span> </div></fieldset></li> <li><font color="#8B0000" face="Helvetica" size="-1"><i>unique Name or emailid helps to show your count </i></font></li>');
+								 $("#page2List").listview('refresh');
+								  if(($("#name").val() == null ) ||  ($("#name").val() == "" )){
+								
+									 $("#indCount").hide();
+								
+									
+									}else{
+									
+									 $ ('#page2').find('ul').find('li:gt(3)').hide().end();
+									
+									 $("#indCount").show();
+									// alert(7);
+									}
+						   }else{
+						 
+						   		$("#page2List").append('<li><fieldset class="ui-grid-a"><div class="ui-block-a"> <input type="checkbox"  name="devCountEnable" id="devCountEnable" class="custom" data-mini="true" /><label for="devCountEnable"><font color="#8B0000" face="Helvetica" size="-1"><i>Your Chants </i></font></label></div><div class="ui-block-b" ><span class="ui-li-count" id="indCount"> </span> </div></fieldset></li> <li><font color="#8B0000" face="Helvetica" size="-1"><i>unique Name or emailid helps to show your count </i></font></li>');
+							
+								$("#page2List").listview('refresh');
+							
+								$ ('#page2').find('ul').find('li:gt(3)').hide().end();
+					
+								$("#indCount").hide();
+					//			alert(12);
+						   }
+						  
+						  $("#page2List").listview('refresh');
+						  
+                           var req = '{"dev_id": '+'"'+$("#name").val()+'"'+',"SSBS":"TCSA"}';
+						   //alert('calling ajax for getjson');
+                           $.ajax({
+                                                     type: "POST",
+                                                     url: "http://region7saicenters.org/saiyazc/api/GayathriCounts",
+                                                     dataType: "json",                                                   
+                                                     data:req,
+                                                     success: function(msg){
+													 
+													    if (msg.total_count > 0) {
+														 document.getElementById("totalCount").innerHTML=msg.total_count;
+														}
+														
+														if (msg.ind_count > 0) {
+															document.getElementById("indCount").innerHTML=msg.ind_count;
+														}
+													 }
+												}); // ajax getJSON ends here
+												
+							 $('#devCountEnable').click(function()
+										  {
+											if($(devCountEnable).prop("checked")){
+												localStorage.devCountEnable="true";
+												
+												if(($("#name").val() == null ) ||  ($("#name").val() == "" )){
+													
+													$ ('#page2').find('ul').find('li:gt(3)').show().end();
+												}else{
+												 $ ('#page2').find('ul').find('li:gt(3)').hide().end();
+												 $("#indCount").show();
+												}
+											  //  alert(localStorage.devCountEnable);
+			///alert(1);
+											}else{
+												localStorage.devCountEnable="false";
+												//alert(localStorage.devCountEnable);
+												$("#indCount").hide();
+												$ ('#page2').find('ul').find('li:gt(3)').hide().end();					;
+												//alert(2);
+											}
+									
+									});	 // IndCountEnable CheckBox onClick Ends Here
+									
+							$("#gcForm").validate({
+                                                 rules: {
+                                                 count: {
+                                                     required: true
+                                                    }
+                                                   },
+                                                 messages: {
+                                                 count: "Please enter a valid count value"
+                                                 }
+                                                 }); // form validaton rules ends here
+            
+                         						 
+            
+                           $("#count").keydown(function (event) {
+                                               if (event.shiftKey) {
+                                               event.preventDefault();
+                                               }
+                                               
+                                               if (event.keyCode == 46 || event.keyCode == 8) {
+                                               }
+                                               else {
+                                               if (event.keyCode < 95) {
+                                               if (event.keyCode < 48 || event.keyCode > 57) {
+                                               event.preventDefault();
+                                               }
+                                               }
+                                               else {
+                                               if (event.keyCode < 96 || event.keyCode > 105) {
+                                               event.preventDefault();
+                                               }
+                                               }
+                                               }
+                                               }); // count filed input validation
+							$("#name").focusout(function() {
+									
+                                  
+										localStorage.name=$("#name").val();
+										var req = '{"dev_id": '+'"'+$("#name").val()+'"'+',"SSBS":"TCSA"}';
+										$.ajax({
+                                                     type: "POST",
+                                                     url: "http://region7saicenters.org/saiyazc/api/GayathriCounts",
+                                                     dataType: "json",                                                   
+                                                     data:req,
+                                                     success: function(msg){
+													 
+													    if (msg.total_count > 0) {
+														 document.getElementById("totalCount").innerHTML=msg.total_count;
+														}
+														if (msg.ind_count > 0) {
+														 document.getElementById("indCount").innerHTML=msg.ind_count;
+														}
+														
+													 }
+												}); // getJSON onfoucs out of name ends here..
+						   
+						   
+						      }); // name field on focus ends here.
+							  
+							  // ----- Form Submit
+							  
+							  $("#gcForm").submit(function(){
+                                              if($("#gcForm").valid()){
+                                                if((localStorage.dev_id_exists == null || localStorage.dev_id_exists == undefined)){
+												   localStorage.dev_id_exists=0;
+												}
+											   var req = '{"record_Dev_count": "1","dev_id_exists": '+'"'+localStorage.dev_id_exists+'"'+',"dev_id": '+'"'+$("#name").val()+'"'+',"SSBS":"TCSA","country": "us","region": "zone1","count": '+'"'+$("#count").val()+'"'+',"comments": "From Mobile App"}';
+											   var confMsg = 'Added ' +  $("#count").val() + ' to Total';
+											   
+											 $.ajax({
+                                                     type: "POST",
+                                                     url: "http://region7saicenters.org/saiyazc/api/GayathrisT",
+                                                     dataType: "json",                                                   
+                                                     data:req,
+                                                     success: function(msg){
+                                                    
+													 if (msg.total_count > 0){
+													   document.getElementById("totalCount").innerHTML=msg.total_count;
+													
+													   $("#count").val("");
+													   $("#count").attr('placeholder', confMsg);
+													   if (msg.dev_id_exists) {
+														  localStorage.dev_id_exists=msg.dev_id_exists;
+														}
+														//alert('soafarsogood');
+													   if (msg.ind_count > 0) {
+													      //   alert('everything is good');
+														  document.getElementById("indCount").innerHTML=msg.ind_count;
+															//$("#indCount").show();
+														}
+														
+														
+													 }else {
+													       var confMsge = 'ERR:' +  msg.error ;
+																$("#count").val("");
+																$("#count").attr('placeholder', confMsge);
+													      }
+													
+													 } //ajax success function ends here
+												});  //ajax form submit ends here
+											 }
+										return false;
+								});
+                                              
+							  
+							  // Form Submit Ends
+												
+                            }); // page2 live pageinit ends here 
+							
+				  // Page 3 init begins here
+					$("#page3").live('pageinit', function() {
+					  
+					  var req = '{"SSBS":"TCSA"}';
+					
+					  $.ajax({
+                                                     type: "GET",
+                                                     url: "http://region7saicenters.org/saiyazc/api/GMngs",
+                                                     dataType: "json",                                                   
+                                                     data:req,
+                                                     success: function(msg){
+												       
+													      document.getElementById("p3li1").innerHTML=msg.msg1;
+														  document.getElementById("p3li2").innerHTML=msg.msg2;
+														  document.getElementById("p3li3").innerHTML=msg.msg3;
+														  document.getElementById("p3li4").innerHTML=msg.msg4;
+														
+														
+													 },
+													 error: function (error) {
+														//alert('error; ' + error);
+														document.getElementById("p3li1").innerHTML='error in getting data';
+												}
+													 
+							});  // Page 3 Ajax Ends Here
+					
+					  
+					   $("#page3List").listview('refresh');
+									
+							});  // Page 3 Init Ends Here
+                           
+                }); // document bind pageinit ends here
+            </script>
+        
+        <script>
+            try {
+                
+                               
+            } catch (error) {
+                console.error("Your javascript has an error: " + error);
+            }
+      </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    Gayatri Chanting
+                </h3>
+            </div>
+            <div data-role="content">
+                
+                <ul data-role="listview">
+                    <li>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div style="width: 50%; height: 50%; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">                            <img src="images/swami_gayatri_idol2.jpg" alt="image" style="position: absolute;  margin-left: -16px; margin-top: -18px" margin-right: -16px;/>                    </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <center>
+                                    <font color="#8B0000" face="Helvetica" size="+1">
+                                       Om Bhur Buvaha Suvaha <br>
+										Thath Savithur Varenyam <br>
+										Bhargo Devasya Dheemahi <br>
+										Dhiyo Yonaha Prachodayath <br>
+                                        
+                                    </font>
+                                </center>
+                            </div>
+                            <div class="ui-block-a">       </div>
+                            <div class="ui-block-b">       </div>
+                        </div>
+						<div data-role="content">
+						   
+                                 <center>
+                                    <font color="#8B0000" face="Helvetica" size="+1">
+                                        Om Shanti Shanti Shanti 
+									</font>
+                                </center>
+                          
+						</div>
+                    </li> 
+					
+					
+					   <li>
+                       
+                            
+							
+						
+						   
+                        
+							     <iframe width="100%" height="60" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F89113420%3Fsecret_token%3Ds-NzSKX&amp;color=8a00ff&amp;auto_play=false&amp;show_artwork=false&amp;liking=false&amp;buying=false"></iframe>		
+						
+					
+                            
+                            
+                            <!--div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <font color="#8B0000" face="Helvetica" size="-1"> <i>
+                                       <br>
+                                    </i></font>
+                                </div>
+                                <div class="ui-block-b">
+                                    <audio controls>
+                                        <source src="audio/gayatri.mp3">
+                                            
+                                            </audio>
+                                    
+                                </div>
+                                
+                            </div-->
+                            
+                            
+                        
+                    </li>
+					
+					
+                    <li>
+                        <div data-role="content">
+                            
+                            <font color="#8B0000" face="Helvetica" size="-1"> <i>
+                                We meditate on that most adorable, most desirable and most enchanting luster
+                                (effulgence) of our supreme Lord, who is our creator, inspirer and source of
+                                eternal Joy. May this light inspire and illumine our intellect (and dispel
+                                the darkness).
+                            </i></font>
+                            
+                        </div>
+                    </li>
+                    
+                </ul>
+			</div>
+            <!--div class="footer" data-theme="b" data-role="footer" data-position="fixed">
+             <h3>
+             Tuned for  Sai Ya Zonal Conference
+             </h3>
+             </div -->
+			
+			
+			
+			
+			<div data-role="footer" data-position="fixed"  >
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-icon="home">Home</a></li>
+                        <li><a href="#page2" data-icon="grid" data-transition="slide">SAI YA Offering</a></li>
+                        <li><a href="#page3" data-icon="gear" data-transition="slide">Benefits</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+		
+		
+		<div data-role="page" id="page2">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    Gayatri Chanting
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" id="page2List">
+                    
+                    <li>
+                        
+                        <font color="#8B0000" face="Helvetica" size="+1"> 88th Birthday offering by Sai Youth</font>
+                        <br>
+                        <font color="#8B0000" face="Helvetica" size="-1"> <i>
+                            Please enter your Gayatri count for the day,daily. On November 23rd, this will be offered at Swami&#39;s Sannidhi in Prashanti Nilayam..
+                        </i></font>
+                        <img src="images/logo.jpg" alt="Min Pin" />
+                        
+                    </li>
+                    
+                    <li>
+                       <!-- <form id="gcForm" name="gcForm" action ="Contribute.php" method = "post" > -->
+                            <form id="gcForm" name="gcForm" > 
+                            
+                            <div data-role="fieldcontain">
+                                <input data-val="true"  id="name" name="name" placeholder="Your Name Here" type="text" value="" />
+                            </div>
+														
+							                            
+                            <fieldset class="ui-grid-a">
+                                <div class="ui-block-a"><input data-val="true"  id="count" name="count" placeholder="21" id="count" maxlength="4" type="number" /></div>
+                                <div class="ui-block-b"><button type="submit"  id="countSubmit" data-theme="b">Submit</button></div>
+                            </fieldset>
+                            
+                            
+                        </form>
+                        
+                    </li>
+					
+				
+                   
+                   <li>
+					
+					
+					   
+								 <font color="#8B0000" face="Helvetica" > 
+									Sai YAs chanted together
+								<span class='ui-li-count' id="totalCount"> </span>
+								 
+								</font>
+						
+								
+                       
+                    </li>
+					
+					<!--li>
+						<fieldset class="ui-grid-a">
+                                <div class="ui-block-a"> <input type="checkbox"  checked="checked" name="devCountEnable" id="devCountEnable" class="custom" data-mini="true" />
+										<label for="devCountEnable">
+											 <font color="#8B0000" face="Helvetica" size="-1"><i> 
+											Your Chants </i>
+											  </font>
+										</label>
+								  </div>
+                                <div class="ui-block-b" id="indCountDiv"><span class='ui-li-count' id="indCount"> </span> </div>
+                        </fieldset>
+					</li>
+					
+					<li>
+					        
+                                
+								 <font color="#8B0000" face="Helvetica" size="-1"><i> 
+												unique Name or emailid helps to show your count </i>
+								  </font>
+								
+                       
+					</li-->
+                    
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed"  >
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-icon="home" data-transition="slide">Home</a></li>
+                        <li><a href="#page2" data-icon="grid" >SAI YA Offering</a></li>
+                        <li><a href="#page3" data-icon="gear" data-transition="slide">Benefits</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div data-role="page" id="page3">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    Gayatri Chanting
+                </h3>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" id="page3List">
+								<li>
+									
+									<font color="#8B0000" face="Helvetica" size="+1"> Sathya Sai speaks on benefits of Gayatri chanting</font>
+									<img src="images/logo.jpg" alt="Min Pin" />
+									
+								</li>
+                    
+							
+                            	<li>
+                        
+								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
+									 <span id="p3li1"> </span> </i>
+									</font>	
+                        
+								</li>	
+								<li>
+                        
+								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
+									 <span id="p3li2"> </span> </i>
+									</font>	
+                        
+								</li>
+								<li>
+                        
+								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
+									 <span id="p3li3"> </span> </i>
+									</font>	
+                        
+								</li>
+								<li>
+                        
+								   <font color="#8B0000" face="Helvetica" size="-1"> <i> 
+									 <span id="p3li4"> </span> </i>
+									</font>	
+                        
+								</li>
+                    
+				</ul>
+            </div>
+            <div data-role="footer" data-position="fixed"  >
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-icon="home"data-transition="slide" >Home</a></li>
+                        <li><a href="#page2" data-icon="grid" data-transition="slide">SAI YA Offering</a></li>
+                        <li><a href="#page3" data-icon="gear" >Benefits</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+		
+		
 	     <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-	  </body>
+    </body>
 </html>
